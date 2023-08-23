@@ -1,7 +1,7 @@
 {% if section.settings.display_recently_viewed_products %} 
-{{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
-{{ 'jquery.products.min.js' | asset_url | script_tag }}
-{{ 'slick.min.js' | asset_url | script_tag }}
+<script data-src="//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" type="lazyload_int"></script>
+<script data-src="{{ 'jquery.products.min.js' | asset_url }}" type="lazyload_int"></script>
+<script data-src="{{ 'slick.min.js' | asset_url }}" type="lazyload_int"></script>
 <div class="{% if settings.product_layout == "full_with" or settings.category_layout == "full_with" %}container-padd60{% else %}container{% endif %}">
     <section class="recently-viewed-products" style="display: none;">
         {% if section.settings.recently_viewed_products_title != '' %}
@@ -32,7 +32,7 @@
   {% render 'recently-viewed-products-default' %}
 {% endif %}
 
-<script>
+<script type="lazyload_int">
     $('.recently-viewed-products').hide();
 
     Shopify.Products.showRecentlyViewed({ 
@@ -324,7 +324,7 @@
     });
 </script>
 
-<script>
+<script type="lazyload_int">
     Shopify.Products.recordRecentlyViewed();
 </script>
 {% endif %}

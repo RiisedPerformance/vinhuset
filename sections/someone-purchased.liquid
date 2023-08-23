@@ -39,7 +39,6 @@
 } 
 </style>
 
-
 {% schema %}
 {
     "name": "Someone Purchased",
@@ -132,16 +131,16 @@
 }
 {% endschema %}
 
-<script>
+<script type="lazyload_int">
 {% if section.settings.show_someone-purchased == 'right' %}
-    $(document).ready(function() {
+    setTimeout(function() {
         $('.product-notification').addClass('notifi-right');
         if($('#accept-cookies').hasClass('cookies-right')){
           $('.footbar-fixed').addClass('all-right')
         }
     })
 {% else %}
-    $(document).ready(function() {
+    setTimeout(function() {
       $('.product-notification').addClass('notifi-left');
       if($('#accept-cookies').hasClass('cookies-left')){
         $('.footbar-fixed').addClass('all-left')
@@ -151,7 +150,7 @@
 </script>
 
 {% if section.settings.display_someone-purchased and section.blocks.size > 0 %}
-<script type="text/javascript">
+<script type="lazyload_int">
     function SomeonePurchased() {
         {% unless section.settings.display_someone-purchased_mb %}
         if(window.innerWidth > 767 ){

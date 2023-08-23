@@ -1,0 +1,34 @@
+<!-- BEGIN app block: shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507 -->
+<script type="lazyload_int" data-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WWpCA9"></script>
+<script type="lazyload_int">!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();</script>
+<!-- END app app block -->
+<!-- BEGIN app block: shopify://apps/avp-age-verification-popup/blocks/app-embed/0b530eb8-f19c-4a9b-87d4-bf625c71dec9 -->
+<script type="lazyload_int">
+    console.log(
+      '%c%s',
+      'background: #ff0000; color: #fff; font-size: 10px; font-weight:bold; padding: 5px 10px; border-radius: 3px',
+      'Age verification popup - By Gminfotech Inc'
+    );
+    var shop = Shopify.shop;    
+    var age_base_url = "https://age.gminfotech.net/";
+    function ScriptLoad(e) {
+        return new Promise(function (t, n) {
+            let r = document.createElement('script');
+            (r.src = e),
+            (r.id = 'test'),
+            (r.type = 'text/javascript'),
+            (r.onError = n),
+            (r.async = false),
+            (r.onload = t),
+            r.addEventListener('error', n),
+            r.addEventListener('load', t),
+            document.getElementsByTagName('head')[0].appendChild(r);
+        });
+    }
+    ScriptLoad('https://age.gminfotech.net//assets/js/age-verification-popup.js').catch(() => {
+        if (rootElement) {
+            rootElement.removeEventListener('click', true);
+        }
+    });
+</script>
+<!-- END app app block -->

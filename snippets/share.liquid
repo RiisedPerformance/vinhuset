@@ -3,5 +3,5 @@
   	{% render 'multilang' with section.settings.share_text %}
   {% endif %}
   <!----- www.addthis.com/dashboard ----->
-  {{ settings.embed_code_share }}
+  {{ settings.embed_code_share |replace: 'type="text/javascript" src="','type="lazyload_int" data-src="' }}
 </div>

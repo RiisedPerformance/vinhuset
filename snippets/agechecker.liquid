@@ -110,7 +110,7 @@ LAST UPDATE Mon Apr 11 2022 06:48:34 GMT+0000
 
     <div id="agp__root"></div>
 
-    <script>
+    <script type="lazyload_int">
         window.agecheckerVsARddsz9 = {
             fields: {{ shop.metafields.agecheckerVsARddsz9 | json }},
             images: {
@@ -268,7 +268,7 @@ LAST UPDATE Mon Apr 11 2022 06:48:34 GMT+0000
 
     {% if age_checker_could_show == true %}
 
-        <script>
+        <script type="lazyload_int">
             window.agecheckerVsARddsz9.isPageMatch = true;
 
             if (window.agecheckerVsARddsz9.getHistory() === 'pass') {
@@ -284,13 +284,13 @@ LAST UPDATE Mon Apr 11 2022 06:48:34 GMT+0000
 
     {% else %}
 
-        <script>
+        <script type="lazyload_int">
             window.agecheckerVsARddsz9.isPageMatch = false;
         </script>
 
     {% endif %}
 
-    <script>
+    <script type="lazyload_int">
         if (window.location.pathname === '/age-checker-preview') {
             window.agecheckerVsARddsz9.isPageMatch = true;
         }

@@ -15,8 +15,8 @@
                               {% when 'image' %}
                             	<div class="thumb filter-{{ media.alt | handle }}">
                                   <a {% if section.settings.enable_zoom_image %}data-zoom{% endif %} class="fancybox" rel="gallery1" href="{{ media | img_url: 'master' }}" data-fancybox="images">
-                                      <img id="product-featured-image-{{media.id}}" src="{{ media | img_url: 'master' }}" alt="{{ media.alt | escape }}"
-                                          class="lazyload"
+                                      <img id="product-featured-image-{{media.id}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-class="LazyLoad" alt="{{ media.alt | escape }}"
+                                          class="lazyloaded"
                                           data-src="{{ media | img_url: 'master' }}"
                                           data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                                           data-aspectratio="{{ media | img_url: 'master' }}"
@@ -81,7 +81,7 @@
                         <div class="item filter-{{ media.alt | handle }}">
                           <div class="product-single__media" data-media-id="{{ media.id }}">
                             <a href="javascript:void(0)" data-image="{{ media | img_url: 'original' }}" data-zoom-image="{{ media | img_url: 'original' }}">
-                              <img src="{{ media | img_url: 'compact' }}" alt="{{ media.alt | escape }}">
+                              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-class="LazyLoad" data-src="{{ media | img_url: '80x' }}" alt="{{ media.alt | escape }}">
                             </a>
                           </div>
                         </div>
@@ -591,4 +591,4 @@
       </div>
   </div>
 </div>
-<script>(function(){var o=document.createElement('script');o.type='text/javascript';o.async=true;o.src='https://pricetag.viabill.com/script/iTfocz3_6Zk%3D';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(o,s);})();</script>
+<script type="lazyload_int">(function(){var o=document.createElement('script');o.type='text/javascript';o.async=true;o.src='https://pricetag.viabill.com/script/iTfocz3_6Zk%3D';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(o,s);})();</script>

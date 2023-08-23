@@ -1,13 +1,13 @@
-{{ 'jquery.min.js' | asset_url | script_tag }}
-{{ 'jquery-cookie.min.js' | asset_url | script_tag }}
-{{ 'lazysizes.min.js' | asset_url | script_tag }}
-
-<script>
-  	window.lazySizesConfig = window.lazySizesConfig || {};
+<script data-src="{{ 'jquery.min.js' | asset_url }}" type="lazyload_int"></script>
+<script data-src="{{ 'jquery-cookie.min.js' | asset_url }}" type="lazyload_int"></script>
+<script data-src="{{ 'lazysizes.min.js' | asset_url }}" type="lazyload_int"></script>
+<script type="lazyload_int">
+    window.lazySizesConfig = window.lazySizesConfig || {};
     lazySizesConfig.loadMode = 1;
     window.lazySizesConfig.init = false;
     lazySizes.init();
-  
+</script>
+<script>  
     window.ajax_cart = "{{ settings.ajax_popup_cart }}";
     window.money_format = "{{shop.money_format}}";//"{{ shop.money_with_currency_format }}";
     window.shop_currency = "{{ shop.currency }}";
