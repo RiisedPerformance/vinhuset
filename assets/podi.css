@@ -1,0 +1,7 @@
+.product-savings {
+	background-color: red;
+}
+
+#dropdown-cart .actions .btn-checkout {
+  display: none !important;
+}

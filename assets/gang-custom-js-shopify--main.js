@@ -1,0 +1,1 @@
+jQuery('.slick-track').on('setPosition', function (event, slick) { jQuery(slick.$slides).height('auto').css('height', jQuery(slick.$slideTrack).height() + 'px'); });
